@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El primer script</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .marcoUno {
+        background-color: aquamarine;
+        padding: 20px;
+    }
+
+    .marcoDos {
+        background-color: blanchedalmond;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    hr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+        color: blue;
+    }
+</style>
+<body>
+    <!--Creamos dos DIVs para encuadrar el contenido-->
+    <div class="marcoUno">
+        <div class="marcoDos">
+            <!--Ponemos un titulo al contenido-->
+            <h1>Actividad adicional dos:<br> Esta pagina contiene el primer Script</h1>
+            <hr>
+            <!--Insertamos textodesde JS-->
+            <h3>- <span id="uno"></span></h3>
+            <!--Insertamos textodesde JS-->
+            <h3><b><script>document.write("- Este es otro ejemplo de como incluir JavaScript directamente en el HTML, se logro con: 'document.write('♥')' ");</script></b></h3>
+        </div>
+    </div>
+    <script src="./nuevocodigo.js"></script>
+    <!--Enviamos un mensaje al usuario si es que tiene desactivado JavaScript en su navegador-->
+    <noscript>
+        <p>Bienvenido a Mi Sitio</p>
+        <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+            Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.</p>
+    </noscript>
+</body>
+</html>

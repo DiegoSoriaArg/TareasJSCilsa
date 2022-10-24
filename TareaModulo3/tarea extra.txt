@@ -1,0 +1,2 @@
+Pasar por parámetro porcentaje de impuesto, si la persona no es de Argentina. 
+Si la persona es de Argentina, es el precio sin impuesto, pero si es de otro lugar, sumar al precio, el impuesto e imprimirlo por consola.

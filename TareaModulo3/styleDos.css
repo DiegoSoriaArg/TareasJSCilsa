@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-color: aquamarine;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.secundario{
+    background-color: blanchedalmond;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.secundario button{
+    background-color: rgb(146, 34, 34);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+.secundario button:hover {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.terciario{
+    text-align:left;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}

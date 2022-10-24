@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .marcoUno{
+        background-color: aquamarine;
+        padding: 20px;
+    }
+    .marcoDos{
+        background-color: blanchedalmond;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="marcoUno">
+        <div class="marcoDos">
+            <h1>Actividad adicional uno: Variables</h1>
+            <p><b><span id="titulo"></span>.</b></p>
+            <p>Nombre: <span id="nombre"></span>.</p>
+            <p>Apellido: <span id="apellido"></span>.</p>
+            <p>Edad: <span id="edad"></span>.</p>
+        </div>
+    </div>
+<script>
+    let apellido;
+    let edad;
+    let nombre = prompt("Por favor, ingresa tu NOMBRE");
+    if (nombre == "") {
+        alert("el valor no puede ser nulo, por favor, vuelve a intentarlo");
+        location.reload();
+    } else {
+        apellido = prompt("Ahora ingresa tu APELLIDO");
+        if (apellido == "") {
+            alert("el valor no puede ser nulo, por favor, vuelve a intentarlo");
+            location.reload();
+        } else {
+            edad = prompt("Y por ultimo, ingresa tu EDAD...");
+            if (edad == "") {
+                alert("el valor no puede ser nulo, por favor, vuelve a intentarlo");
+                location.reload();
+            }
+        }
+    }
+
+    document.getElementById('titulo').innerHTML = "Usted fue registrado con los siguientes datos:";
+    document.getElementById('nombre').innerHTML = nombre;
+    document.getElementById('apellido').innerHTML = apellido;
+    document.getElementById('edad').innerHTML = edad;
+</script>
+
+</body>
+</html>

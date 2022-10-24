@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cajaUno {
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+.cajaDos {
+    background-color: blanchedalmond;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
