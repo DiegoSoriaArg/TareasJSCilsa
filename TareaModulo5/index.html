@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio DOM</title>
+    <!--Estilo para ocultar la informacion del ultimo parrafo-->
+    <style type="text/css">
+        .oculto { display: none; }
+        .visible { display: inline; }
+    </style>
+</head>
+<body>
+
+    <div id="infopag" style="border:thin solid rgb(29, 13, 117); padding: 2px;"></div>
+    <h3>Centros de Formacion CILSA</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate commodi ipsum laborum impedit similique consectetur, quam nihil porro corporis exercitationem voluptatem dolore nesciunt! Molestiae, recusandae repellendus nihil eum culpa cum vitae totam rem, deleniti sint quos <a href="https://www.facebook.com/SoriaDev">(iste sapiente) aut soluta temporibus</a>, praesentium laboriosam expedita pariatur beatae illum neque. Maxime asperiores quaerat velit magni voluptatem architecto itaque fugit doloremque maiores nobis quas,<a href="https://www.facebook.com/SoriaDev">(enim exercitationem, est eligendi?)</a> Ab doloribus, soluta fuga earum sed delectus sit! Quaerat animi ut commodi eius rem exercitationem autem quas repellendus dignissimos earum, eum dolore placeat error nisi laboriosam odio! Atque magni quis cumque, vitae alias dolorem! At!
+    </p>
+
+    <h3>Si quiere anotarse para los proximos cursos, presione "Añadir su nombre"</h3>
+    <ul id="alumnos">
+        <li>Jesus Alnlnl</li>
+        <li>Skllkn LKNAL</li>
+        <li>SDNln MMJKLM</li>
+        <li>Ñ[jllnlkn LKNkjnb</li>
+        <li>Nkjhnk LLlkn</li>
+    </ul>
+
+    <input type="button" value="Añadir su Nombre" onclick="agrega()">
+
+    <hr color="blue" size="3">
+
+    <h3>Conoce un poco mas sobre nosotros</h3>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate distinctio a doloremque, magni inventore eum cum, neque nam voluptas tempore nostrum eius nulla reprehenderit officiis odit, illum sunt omnis enim earum? Nobis dolorem iusto accusamus ipsa! Rerum,<span id="adicional" class="oculto"> quae repellat sunt minima eaque, pariatur saepe quaerat, temporibus assumenda dolorem architecto sed doloremque. Saepe laudantium iusto exercitationem commodi unde error expedita libero.</span></p>
+
+    <a href="#" id="enlace" onclick="muestra()">Seguir leyendo</a>
+
+<script>
+
+    var primerPrompt = prompt('Ingresa tu nombre');
+    var segundoPrompt = prompt('Ingresa tu apellido');
+
+    window.onload = function(){
+        let info = document.getElementById("infopag");
+        let enlaces = document.getElementsByTagName("a");
+
+        let elemento = document.createElement("p");
+        let contenido = document.createTextNode("Gracias por visitar nuestra pagina " + primerPrompt);
+        elemento.appendChild(contenido);
+        info.appendChild(elemento);
+
+        let segundoElemento = document.createElement("p");
+        let segundoContenido = document.createTextNode("Numeros de enlaces = " + enlaces.length);
+        segundoElemento.appendChild(segundoContenido);
+        info.appendChild(segundoElemento);
+
+    }
+
+    // completa la funcion agrega()
+    var listaEditar = document.getElementById("alumnos");
+    var element = document.createElement("li");
+    var nombreCompleto = document.createTextNode(primerPrompt + " " + segundoPrompt);
+    function agrega(){
+        element.appendChild(nombreCompleto);
+        listaEditar.appendChild(element);
+    }
+
+    // con esta funcion mostramos el contenido faltante del ultimo parrafo
+    function muestra(){
+        let elemento = document.getElementById("adicional");
+        elemento.className = "visible";
+
+        let enlace = document.getElementById("enlace");
+        enlace.className = "oculto";
+
+    }
+
+</script>    
+</body>
+</html>
